@@ -7,6 +7,7 @@ function* getTaskApi(action) {
     yield put({ type: DISPLAY_LOADING })
     try {
         const { data, status } = yield call(toDoListServies.getTaskApi)
+        console.log('data :>> ', data);
         if (status === 200) {
             yield put({
                 type: TodolistTypes.GET_ALL_TASK,
