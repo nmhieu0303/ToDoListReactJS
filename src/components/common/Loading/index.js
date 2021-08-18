@@ -11,6 +11,6 @@ export default function Loading() {
                 <img src={imageLoading} alt="loading" />
             </div>
         )
-    }else return ''
+    } else return <></>
 
 }

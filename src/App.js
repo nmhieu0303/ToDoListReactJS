@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Loading/>
+        <Loading />
         <Switch>
           {anonymousRouters.map((route,index) => {
             return <Route key={index} path={route.href} component={route.component} exact />
