@@ -18,27 +18,11 @@ const Header = () => {
                             <NavLink activeClassName="active_link" className="nav-link" to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName="active_link" className="nav-link" to="/about-us">About us</NavLink>
+                            <NavLink activeClassName="active_link" className="nav-link" to="/todolist">To do list Redux-Thunk</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName="active_link" className="nav-link" to="/contact">Contact</NavLink>
+                            <NavLink activeClassName="active_link" className="nav-link" to="/todolist-saga">To do list Redux-Saga</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink activeClassName="active_link" className="nav-link" to="/login">Login</NavLink>
-                        </li>
-                        {userLogin ?
-                            (<>
-                                <li className="nav-item">
-                                    <NavLink activeClassName="active_link" className="nav-link" to="/todolist">To do list Redux-Thunk</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink activeClassName="active_link" className="nav-link" to="/todolist-saga">To do list Redux-Saga</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink activeClassName="active_link" className="nav-link" to="/profile">Profile</NavLink>
-                                </li>
-                            </>) : ''
-                        }
                     </ul>
                     <form className="d-flex my-2 my-lg-0">
                         <input className="form-control me-sm-2" type="text" placeholder="Search" />
@@ -46,7 +30,7 @@ const Header = () => {
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 
