@@ -7,7 +7,6 @@ function* getTaskApi(action) {
     yield put({ type: DISPLAY_LOADING })
     try {
         const { data, status } = yield call(toDoListServies.getTaskApi)
-        console.log('data :>> ', data);
         if (status === 200) {
             yield put({
                 type: TodolistTypes.GET_ALL_TASK,
@@ -15,7 +14,7 @@ function* getTaskApi(action) {
             })
         }
     } catch (error) {
-        console.log(error.response.data)
+        console.error()
     }
     yield put({ type: HIDE_LOADING })
 }
@@ -27,11 +26,15 @@ function* watchGetTaskApi() {
 function* addTaskApiAction(action) {
     const { taskName } = action
     yield put({ type: DISPLAY_LOADING })
-    const { status } = yield call(() => toDoListServies.addTaskApi(taskName))
-    if (status === 200) {
-        yield put({
-            type: TodolistSagaTypes.GET_TASKLIST_API
-        })
+    try {
+        const { status } = yield call(() => toDoListServies.addTaskApi(taskName))
+        if (status === 200) {
+            yield put({
+                type: TodolistSagaTypes.GET_TASKLIST_API
+            })
+        }
+    } catch (error) {
+        console.error()
     }
     yield put({ type: HIDE_LOADING })
 }
@@ -42,11 +45,15 @@ function* watchAddTaskApi() {
 function* deleteTaskApiAction(action) {
     const { taskName } = action
     yield put({ type: DISPLAY_LOADING })
-    const { status } = yield call(() => toDoListServies.deleteTaskApi(taskName))
-    if (status === 200) {
-        yield put({
-            type: TodolistSagaTypes.GET_TASKLIST_API
-        })
+    try {
+        const { status } = yield call(() => toDoListServies.deleteTaskApi(taskName))
+        if (status === 200) {
+            yield put({
+                type: TodolistSagaTypes.GET_TASKLIST_API
+            })
+        }
+    } catch (error) {
+        console.error()
     }
     yield put({ type: HIDE_LOADING })
 }
@@ -56,11 +63,15 @@ function* watchDeleteTaskApi() {
 function* doneTaskApiAction(action) {
     const { taskName } = action
     yield put({ type: DISPLAY_LOADING })
-    const { status } = yield call(() => toDoListServies.doneTaskApi(taskName))
-    if (status === 200) {
-        yield put({
-            type: TodolistSagaTypes.GET_TASKLIST_API
-        })
+    try {
+        const { status } = yield call(() => toDoListServies.doneTaskApi(taskName))
+        if (status === 200) {
+            yield put({
+                type: TodolistSagaTypes.GET_TASKLIST_API
+            })
+        }
+    } catch (error) {
+        console.error()
     }
     yield put({ type: HIDE_LOADING })
 }
@@ -71,11 +82,15 @@ function* watchDoneTaskApi() {
 function* rejectTaskApiAction(action) {
     const { taskName } = action
     yield put({ type: DISPLAY_LOADING })
-    const { status } = yield call(() => toDoListServies.rejectTaskApi(taskName))
-    if (status === 200) {
-        yield put({
-            type: TodolistSagaTypes.GET_TASKLIST_API
-        })
+    try {
+        const { status } = yield call(() => toDoListServies.rejectTaskApi(taskName))
+        if (status === 200) {
+            yield put({
+                type: TodolistSagaTypes.GET_TASKLIST_API
+            })
+        }
+    } catch (error) {
+        console.error()
     }
     yield put({ type: HIDE_LOADING })
 }
