@@ -13,41 +13,52 @@ export const anonymousRouters = [{
     href: ROUTE_PATHS.HOME,
     exact:true,
     component:Home,
+    template:'default',
 },{
     href: ROUTE_PATHS.ABOUT_US,
     exact:true,
     component:AboutUs,
+    template:'default',
 },{
     href: ROUTE_PATHS.CONTACT,
     exact:true,
     component:Contact,
+    template:'default',
 },{
     href: ROUTE_PATHS.LOGIN,
     exact:true,
     component:Login,
+    template:'default',
 },{
     href: ROUTE_PATHS.DETAIL,
     exact:true,
     component:Detail,
+    template:'default',
 },{
     href: ROUTE_PATHS.PROFILE,
     exact:true,
     component:Profile,
+    template:'default',
 },{
     href: ROUTE_PATHS.PROFILE,
     exact:true,
     component:Profile,
+    template:'default',
 },{
     href: ROUTE_PATHS.TODOLIST,
     exact:true,
     component:Todolist,
+    template:'default',
 },{
     href: ROUTE_PATHS.TODOLIST_SAGA,
     exact:true,
     component:TodolistSaga,
+    template:'default',
 },{
     href: ROUTE_PATHS.PAGE_NOT_FOUND,
     exact:true,
     component:PageNotFound,
+    template:'default',
+
 }
 ]
